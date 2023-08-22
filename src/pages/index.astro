@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 
 import Avatar from "../components/Avatar.astro";
 import Linkedin from "../images/socials/linkedin.svg";
 import Github from "../images/socials/github.svg";
 import Instagram from "../images/socials/instagram.svg";
-import Link from "../components/Link.astro";
+import At from "../images/socials/at.svg";
 ---
 
 <Layout title="Home">
@@ -51,6 +52,15 @@ import Link from "../components/Link.astro";
             class="hover:animate-wiggle"
           /></a
         >
+      </li>
+      <li>
+        <a href="mailto:jonchong56@gmail.com"
+          ><img
+            src={At}
+            width="35"
+            alt="Email"
+            class="hover:animate-wiggle"
+          /></a>
       </li>
     </ul>
   </div>
