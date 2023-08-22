@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="About">
+  <article class="container mx-auto space-y-2 py-10">
+    <header class="pb-2">
+      <h1 class="text-3xl font-extrabold pt-2">Hi, I'm Jon 👋🏼</h1>
+      <h2 class="text-lg font-bold text-neutral-600 pt-2">
+        Professional Software Engineer, Amateur Cook, Enjoyer of SciFi and
+        Pourover Coffee
+      </h2>
+    </header>
+    <p>
+      I mainly write TypeScript, HTML, and CSS. I am currently dabbling in the <Link
+        href="https://astro.build/"
+      >
+        Astro
+      </Link> framework (fun fact: this website was built with Astro) and am learning
+      how to contribute to open source! You can find my work on <Link
+        href="https://github.com/jocchong"
+      >
+        GitHub
+      </Link>.
+    </p>
+    <p>I was born & raised in the Bay Area and currently live in New York.</p>
+    <p>
+      <strong>...and I am currently looking for a full-time position!</strong> Please
+      reach out to me <Link href="mailto:jonchong56@gmail.com">here</Link>.
+    </p>
+  </article>
+</Layout>

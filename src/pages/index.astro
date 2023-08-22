@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Avatar from "../components/Avatar.astro";
+import Linkedin from "../images/socials/linkedin.svg";
+import Github from "../images/socials/github.svg";
+import Instagram from "../images/socials/instagram.svg";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Home">
+  <hr class="border-2 border-black" />
+  <div class="flex flex-col items-center space-y-2 py-10 bg-[#F7C59F]">
+    <Avatar />
+    <h1 class="text-[3.5rem] font-extrabold">Jon Chong</h1>
+    <ul class="flex space-x-4">
+      <li>
+        <a
+          href="https://www.linkedin.com/in/jonchong56/"
+          target="_blank"
+          rel="noreferrer noopener"
+          ><img
+            src={Linkedin}
+            width="35"
+            alt="LinkedIn"
+            class="hover:animate-wiggle"
+          /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/jocchong"
+          target="_blank"
+          rel="noreferrer noopener"
+          ><img
+            src={Github}
+            width="35"
+            alt="GitHub"
+            class="hover:animate-wiggle"
+          /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/joomooru/"
+          target="_blank"
+          rel="noreferrer noopener"
+          ><img
+            src={Instagram}
+            width="35"
+            alt="Instagram"
+            class="hover:animate-wiggle"
+          /></a
+        >
+      </li>
+    </ul>
+  </div>
+  <hr class="border-2 border-black border-dashed" />
+  <article>
+    <section class="container mx-auto py-12">
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h2 class="text-3xl font-bold">About Me</h2>
+          <p class="text-xl font-semibold">
+            Hi, I'm Jon, a software engineer with a passion for technology and
+            creativity.
+          </p>
+        </div>
+        <div>
+          <p>
+            I'm obsessed with writing accessible and open websites by leveraging
+            existing web standards, rather than wasting precious time
+            re-engineering shitty comboboxes that are neither predictable nor
+            accessible.
+          </p>
+          <p>
+            In my free time, I enjoy re-learning piano, cooking Asian and
+            Italian food, reading science fiction, and finding the best coffee
+            shops in New York!
+          </p>
+          <p>
+            You can read more about me <Link href="/about">here.</Link> Grab a
+            cup of coffee and enjoy your stay! ☕️
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr class="border-2 border-black border-dashed" />
+    <section class="py-10 px-5 md:px-20">
+      <h2 class="text-3xl font-bold">Recent Posts</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis nam
+        magnam, molestiae neque nostrum porro eveniet illum excepturi cupiditate
+        qui ad aliquam sint commodi minus facilis obcaecati amet eius!
+      </p>
+      <p>
+        Rerum obcaecati quidem doloremque molestiae, non eveniet harum. Vero,
+        praesentium adipisci, quis minus veritatis temporibus ratione nemo
+        libero quas iusto corporis vel aut nostrum sunt qui error! Perferendis,
+        quos sint!
+      </p>
+      <p>
+        Ea, rem cum suscipit alias soluta necessitatibus quos id eligendi
+        consectetur ipsam tenetur sed quo ratione laboriosam, saepe placeat
+        labore debitis recusandae corrupti. Minima mollitia dolores saepe
+        nostrum ut doloremque!
+      </p>
+    </section>
+  </article>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import AvatarUrl from "../images/avatar.png";
+---
+<img
+  id="avatar"
+  src={AvatarUrl}
+  alt="Avatar representing Jon Chong"
+  width="350"
+  class="border-4 border-black rounded-full"
+/>
+<script>
+  import Avatar from "../images/avatar.png";
+  import AvatarBlinking from "../images/avatar-blinking.png";
+  const avatar = document.getElementById("avatar")!;
+  setInterval(() => {
+    avatar.setAttribute("src", AvatarBlinking);
+    setTimeout(() => {
+      avatar.setAttribute("src", Avatar);
+    }, 300);
+  }, 3_000);
+</script>
