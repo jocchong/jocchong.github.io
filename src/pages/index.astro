@@ -9,7 +9,6 @@ import Link from "../components/Link.astro";
 ---
 
 <Layout title="Home">
-  <hr class="border-2 border-black" />
   <div class="flex flex-col items-center space-y-2 py-10 bg-[#F7C59F]">
     <Avatar />
     <h1 class="text-[3.5rem] font-extrabold">Jon Chong</h1>
@@ -57,15 +56,13 @@ import Link from "../components/Link.astro";
   </div>
   <hr class="border-2 border-black border-dashed" />
   <article>
-    <section class="container mx-auto py-12">
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <h2 class="text-3xl font-bold">About Me</h2>
-          <p class="text-xl font-semibold">
-            Hi, I'm Jon, a software engineer with a passion for technology and
-            creativity.
-          </p>
-        </div>
+    <section class="container mx-auto py-10 px-4">
+      <h2 class="text-3xl font-bold">About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h3 class="text-xl font-semibold pt-2">
+          Hi, I'm Jon, a software engineer with a passion for technology and
+          creativity.
+        </h3>
         <div>
           <p>
             I'm obsessed with writing accessible and open websites by leveraging
@@ -79,8 +76,8 @@ import Link from "../components/Link.astro";
             shops in New York!
           </p>
           <p>
-            You can read more about me <Link href="/about">here.</Link> Grab a
-            cup of coffee and enjoy your stay! ☕️
+            You can read more about me <Link href="/about">here.</Link> Grab a cup
+            of coffee and enjoy your stay! ☕️
           </p>
         </div>
       </div>
