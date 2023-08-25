@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
 
 import Avatar from "../components/Avatar.astro";
+import Portrait from "../images/portrait.jpeg";
 import Linkedin from "../images/socials/linkedin.svg";
 import Github from "../images/socials/github.svg";
 import Instagram from "../images/socials/instagram.svg";
@@ -10,108 +11,266 @@ import At from "../images/socials/at.svg";
 ---
 
 <Layout title="Home">
-  <div class="flex flex-col items-center space-y-2 py-10 bg-[#F7C59F]">
-    <Avatar />
-    <h1 class="text-[3.5rem] font-extrabold">Jon Chong</h1>
-    <ul class="flex space-x-4">
-      <li>
-        <a
-          href="https://www.linkedin.com/in/jonchong56/"
-          target="_blank"
-          rel="noreferrer noopener"
-          ><img
-            src={Linkedin}
-            width="35"
-            alt="LinkedIn"
-            class="hover:animate-wiggle"
-          /></a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/jocchong"
-          target="_blank"
-          rel="noreferrer noopener"
-          ><img
-            src={Github}
-            width="35"
-            alt="GitHub"
-            class="hover:animate-wiggle"
-          /></a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.instagram.com/joomooru/"
-          target="_blank"
-          rel="noreferrer noopener"
-          ><img
-            src={Instagram}
-            width="35"
-            alt="Instagram"
-            class="hover:animate-wiggle"
-          /></a
-        >
-      </li>
-      <li>
-        <a href="mailto:jonchong56@gmail.com"
-          ><img
-            src={At}
-            width="35"
-            alt="Email"
-            class="hover:animate-wiggle"
-          /></a>
-      </li>
-    </ul>
+  <div
+    id="hero"
+    class="flex flex-col lg:flex-row items-center bg-red-200 lg:py-0 py-8"
+  >
+    <div class="container flex justify-center lg:bg-red-400 lg:py-36 py-8">
+      <Avatar />
+    </div>
+    <div class="container lg:pl-10 lg:py-0">
+      <h1
+        class="text-[4rem] text-black leading-normal font-extrabold text-center lg:text-left"
+      >
+        Jon Chong
+      </h1>
+      <ul class="flex space-x-4 lg:justify-start justify-center lg:pl-4">
+        <li>
+          <Link href="https://www.linkedin.com/in/jonchong56/" inNewTab>
+            <img
+              src={Linkedin}
+              width="35"
+              alt="LinkedIn"
+              class="hover:animate-wiggle"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link href="https://github.com/jocchong" inNewTab>
+            <img
+              src={Github}
+              width="35"
+              alt="GitHub"
+              class="hover:animate-wiggle"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link href="mailto:jonchong56@gmail.com">
+            <img src={At} width="35" alt="Email" class="hover:animate-wiggle" />
+          </Link>
+        </li>
+        <li>
+          <Link href="https://www.instagram.com/joomooru/" inNewTab>
+            <img
+              src={Instagram}
+              width="35"
+              alt="Instagram"
+              class="hover:animate-wiggle"
+            />
+          </Link>
+        </li>
+      </ul>
+    </div>
   </div>
-  <hr class="border-2 border-black border-dashed" />
-  <article>
-    <section class="container mx-auto py-10 px-4">
-      <h2 class="text-3xl font-bold">About Me</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <h3 class="text-xl font-semibold pt-2">
-          Hi, I'm Jon, a software engineer with a passion for technology and
-          creativity.
-        </h3>
-        <div>
+  <hr class="border-4 border-black border-dashed" />
+  <article id="about-me" class="container mx-auto py-10 px-3 space-y-3">
+    <section class="grid lg:grid-cols-3 gap-4">
+      <div class="col-span-2">
+        <header class="pb-2">
+          <h2 class="text-3xl font-extrabold pt-2">Hi, I'm Jon 👋🏼</h2>
+          <h3 class="text-xl font-bold text-neutral-600 pt-2">
+            Professional Software Engineer
+          </h3>
+        </header>
+        <div class="space-y-2 col-span-2">
+          <h3 class="text-xl font-bold">About Me</h3>
           <p>
-            I'm obsessed with writing accessible and open websites by leveraging
-            existing web standards, rather than wasting precious time
-            re-engineering shitty comboboxes that are neither predictable nor
-            accessible.
+            My main areas of expertise are web development involving JavaScript,
+            HTML, and CSS. I have worked with many modern frontend frameworks,
+            including React, Angular, Svelte. I've also used backend frameworks
+            such as Express and NestJS. I'm obsessed with optimizing websites by
+            utilizing existing standards, and reducing JavaScript bundle size.
           </p>
+          <p>Born & raised in the Bay Area, now living in New York.</p>
           <p>
-            In my free time, I enjoy re-learning piano, cooking Asian and
-            Italian food, reading science fiction, and finding the best coffee
-            shops in New York!
-          </p>
-          <p>
-            You can read more about me <Link href="/about">here.</Link> Grab a cup
-            of coffee and enjoy your stay! ☕️
+            <strong
+              >...and I am currently looking for a full-time position!</strong
+            > Please reach out to me
+            <Link href="mailto:jonchong56@gmail.com">here</Link>.
           </p>
         </div>
       </div>
-    </section>
-    <hr class="border-2 border-black border-dashed" />
-    <section class="py-10 px-5 md:px-20">
-      <h2 class="text-3xl font-bold">Recent Posts</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis nam
-        magnam, molestiae neque nostrum porro eveniet illum excepturi cupiditate
-        qui ad aliquam sint commodi minus facilis obcaecati amet eius!
-      </p>
-      <p>
-        Rerum obcaecati quidem doloremque molestiae, non eveniet harum. Vero,
-        praesentium adipisci, quis minus veritatis temporibus ratione nemo
-        libero quas iusto corporis vel aut nostrum sunt qui error! Perferendis,
-        quos sint!
-      </p>
-      <p>
-        Ea, rem cum suscipit alias soluta necessitatibus quos id eligendi
-        consectetur ipsam tenetur sed quo ratione laboriosam, saepe placeat
-        labore debitis recusandae corrupti. Minima mollitia dolores saepe
-        nostrum ut doloremque!
-      </p>
+      <figure class="">
+        <img
+          src={Portrait}
+          alt="Portrait of Jon Chong"
+          width="300"
+          class="rounded"
+        />
+        <figcaption class="text-neutral-600">
+          A portrait of me by
+          <Link href="https://www.instagram.com/bradtna/" inNewTab>
+            Bradtna Lou
+          </Link>
+        </figcaption>
+      </figure>
     </section>
   </article>
+  <hr class="border-4 border-black border-dashed" />
+  <section id="what-ive-done" class="container mx-auto py-10 px-3 space-y-3">
+    <article>
+      <h2 class="text-3xl font-extrabold pt-2">What I've Done</h2>
+      <section>
+        <h3 class="text-2xl font-bold mt-4">Professional Experience</h3>
+        <ul class="mt-2">
+          <li>
+            <details
+              class="hover:bg-neutral-200 open:bg-neutral-200 open:text-black transition-all duration-200 rounded-lg px-4 py-3"
+            >
+              <summary class="font-semibold hover:cursor-pointer"
+                >Haven Technologies <span class="text-neutral-500 text-sm"
+                  >Jan 2023 - Jun 2023</span
+                >
+              </summary>
+              <div class="px-4 py-2 space-y-4">
+                <em>Full Stack Developer</em>
+                <div>
+                  <h4 class="font-semibold">Responsibilities</h4>
+                  <p>
+                    Modernized a legacy application by building, testing, and
+                    deploying a modern full stack web app, Angular Typescript
+                    frontend with Express backend and GraphQL API. Performed
+                    on-call duties as primary point of contact to fix issues in
+                    QA, demo, and production environments.
+                  </p>
+                </div>
+                <div class="grid gap-4 lg:grid-cols-3 grid-cols-1">
+                  <div class="lg:col-span-2">
+                    <h4 class="font-semibold">Achievements</h4>
+                    <ul class="list-disc list-inside">
+                      <li>
+                        Reduced total data queried from database through use of
+                        optimized SQL queries and GraphQL, retrieving only data
+                        needed per request.
+                      </li>
+                      <li>
+                        Minimized redundant database queries by using
+                        performance profiling tools that identified and
+                        optimized problematic components.
+                      </li>
+                      <li>
+                        Created more inclusive experience by working closely
+                        with UX designers, ensuring full accessibility of new
+                        and existing components.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Technologies</h4>
+                    <ul class="list-disc list-inside">
+                      <li>Angular</li>
+                      <li>GraphQL</li>
+                      <li>Docker</li>
+                      <li>Express</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details
+              class="hover:bg-neutral-200 open:bg-neutral-200 transition-all duration-200 rounded-lg px-4 py-3"
+            >
+              <summary class="font-semibold hover:cursor-pointer">
+                Beckman Coulter <span class="text-neutral-500 text-sm"
+                  >Jun 2020 - Jan 2023</span
+                >
+              </summary>
+              <div class="px-4 py-2 space-y-4">
+                <em>Full Stack Developer</em>
+                <div>
+                  <h4 class="font-semibold">Responsibilities</h4>
+                  <p>
+                    Modernized a legacy application by building, testing, and
+                    deploying a modern full stack web app, Angular Typescript
+                    frontend with Express backend and GraphQL API. Performed
+                    on-call duties as primary point of contact to fix issues in
+                    QA, demo, and production environments.
+                  </p>
+                </div>
+                <div class="grid gap-4 lg:grid-cols-3 grid-cols-1">
+                  <div class="lg:col-span-2">
+                    <h4 class="font-semibold">Achievements</h4>
+                    <ul class="list-disc list-inside">
+                      <li>
+                        Reduced total data queried from database through use of
+                        optimized SQL queries and GraphQL, retrieving only data
+                        needed per request.
+                      </li>
+                      <li>
+                        Minimized redundant database queries by using
+                        performance profiling tools that identified and
+                        optimized problematic components.
+                      </li>
+                      <li>
+                        Created more inclusive experience by working closely
+                        with UX designers, ensuring full accessibility of new
+                        and existing components.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Technologies</h4>
+                    <ul class="list-disc list-inside">
+                      <li>Angular</li>
+                      <li>GraphQL</li>
+                      <li>Docker</li>
+                      <li>Express</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details
+              class="hover:bg-neutral-200 open:bg-neutral-200 transition-all duration-200 rounded-lg px-4 py-3"
+            >
+              <summary class="font-semibold hover:cursor-pointer"
+                >Wyde <span class="text-neutral-500 text-sm"
+                  >Jan 2020 - Jun 2020</span
+                ></summary
+              >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                optio eos iure rerum exercitationem facilis perspiciatis natus?
+                Eveniet veniam soluta possimus reprehenderit cumque ducimus
+                quidem nesciunt, fugiat, at iusto similique?
+              </p>
+            </details>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="text-2xl font-bold mt-4">Education</h3>
+        <ul>
+          <li>
+            <div>
+              <span class="font-semibold"
+                >University of California, Santa Cruz</span
+              >
+              <span class="text-neutral-500 text-sm">Jun 2020 - Jan 2023</span>
+            </div>
+            <p>B.S. Computer Science</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="text-2xl font-bold mt-4">Skills</h3>
+        <div></div>
+      </section>
+    </article>
+  </section>
+  <hr class="border-4 border-black border-dashed" />
+  <section
+    id="selected-blog-posts"
+    class="container mx-auto py-10 px-3 space-y-3"
+  >
+    <article>
+      <h2 class="text-3xl font-extrabold pt-2">Selected Blog Posts</h2>
+      <p class="py-4">🚧🚨 Under Construction 🚧🚨</p>
+    </article>
+  </section>
 </Layout>

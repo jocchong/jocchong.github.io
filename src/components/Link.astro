@@ -1,4 +1,20 @@
 ---
-const { href, ...rest } = Astro.props;
+interface Props {
+  href: string;
+  inNewTab?: boolean;
+}
+
+const { href, inNewTab, ...rest } = Astro.props;
+const additionalAttributes: any = {};
+if (inNewTab) {
+  additionalAttributes.target = "_blank";
+  additionalAttributes.rel = "noreferrer noopener";
+}
 ---
-<a href={href} class="text-blue-400 underline" {...rest}><slot/></a>
+
+<a
+  href={href}
+  class="text-blue-400 underline"
+  {...additionalAttributes}
+  {...rest}><slot /></a
+>
