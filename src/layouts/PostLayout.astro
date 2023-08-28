@@ -4,22 +4,22 @@ import Layout from "./Layout.astro";
 
 type Props = MarkdownLayoutProps<{
   title: string;
-  pubDate: string;
+  publishedDate: string;
   description: string;
   tags?: string[];
 }>;
 const { frontmatter } = Astro.props;
-const pubDateDisplay = new Date(frontmatter.pubDate).toDateString();
+const pubDateString = new Date(frontmatter.publishedDate).toDateString();
 ---
 
 <Layout title={frontmatter.title}>
   <article
-    class="mx-auto prose prose-slate lg:prose-lg text-justify px-4 py-10"
+    class="prose prose-slate  lg:prose-lg mx-auto my-12"
   >
     <header>
-      <h1>{frontmatter.title}</h1>
-      <h2 class="text-3xl text-neutral-500">{frontmatter.description}</h2>
-      <time class="text-neutral-500">{pubDateDisplay}</time>
+      <h1 class="mb-4">{frontmatter.title}</h1>
+      <h2 class="text-3xl m-0 text-neutral-500">{frontmatter.description}</h2>
+      <time class="text-neutral-500">{pubDateString}</time>
     </header>
     <slot />
   </article>
