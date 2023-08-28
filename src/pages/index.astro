@@ -9,14 +9,16 @@ import Portrait from "../images/portrait.jpeg";
 <Layout title="Home">
   <div
     id="hero"
-    class="flex flex-col lg:flex-row items-center bg-red-200 py-8 lg:py-0"
+    class="flex flex-col lg:flex-row items-center bg-amber-400 dark:bg-amber-600 py-8 lg:py-0"
   >
-    <div class="container flex justify-center lg:bg-red-400 lg:py-36 py-8">
+    <div
+      class="container flex justify-center lg:bg-amber-600 lg:dark:bg-amber-800 lg:py-36 py-8"
+    >
       <Avatar />
     </div>
     <div class="container lg:pl-10 lg:py-0">
       <h1
-        class="text-[4rem] text-black leading-normal font-extrabold text-center"
+        class="text-[4.5rem] text-zinc-900 leading-normal font-extrabold text-center"
       >
         Jon Chong
       </h1>
@@ -28,7 +30,7 @@ import Portrait from "../images/portrait.jpeg";
       <div class="col-span-2">
         <header>
           <h2 class="text-3xl font-extrabold">Hi, I'm Jon 👋🏼</h2>
-          <h3 class="text-xl font-bold text-slate-500">
+          <h3 class="text-xl font-bold text-zinc-500">
             Professional Software Engineer
           </h3>
         </header>
@@ -58,7 +60,7 @@ import Portrait from "../images/portrait.jpeg";
           class="rounded"
         />
         <figcaption>
-          Fall in Central Park <span class="text-slate-500 text-sm"
+          Fall in Central Park <span class="text-zinc-500 text-sm"
             >Image:
             <Link href="https://www.instagram.com/bradtna/" inNewTab>
               Bradtna Lou
@@ -68,7 +70,7 @@ import Portrait from "../images/portrait.jpeg";
       </figure>
     </div>
   </article>
-  <hr class="border lg:mx-8" />
+  <hr class="lg:mx-8" />
   <section id="what-ive-done" class="container mx-auto space-y-2 px-4 py-12">
     <article>
       <h2 class="text-3xl font-extrabold pt-2">What I've Done</h2>
@@ -77,10 +79,10 @@ import Portrait from "../images/portrait.jpeg";
         <ul class="mt-2 space-y-2">
           <li>
             <details
-              class="hover:bg-slate-200 open:bg-slate-200 open:text-black transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-zinc-200 open:bg-zinc-200 open:text-zinc-800 transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer"
-                >Haven Technologies <span class="text-slate-500 text-sm"
+                >Haven Technologies <span class="text-zinc-500 text-sm"
                   >Jan 2023 - Jun 2023</span
                 >
               </summary>
@@ -132,10 +134,10 @@ import Portrait from "../images/portrait.jpeg";
           </li>
           <li>
             <details
-              class="hover:bg-slate-200 open:bg-slate-200 transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-zinc-200 open:bg-zinc-200 open:text-zinc-800 transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer">
-                Beckman Coulter <span class="text-slate-500 text-sm"
+                Beckman Coulter <span class="text-zinc-500 text-sm"
                   >Jun 2020 - Jan 2023</span
                 >
               </summary>
@@ -191,10 +193,10 @@ import Portrait from "../images/portrait.jpeg";
           </li>
           <li>
             <details
-              class="hover:bg-slate-200 open:bg-slate-200 transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-zinc-200 open:bg-zinc-200 open:text-zinc-800 transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer"
-                >Wyde <span class="text-slate-500 text-sm"
+                >Wyde <span class="text-zinc-500 text-sm"
                   >Jan 2020 - Jun 2020</span
                 ></summary
               >
@@ -243,7 +245,7 @@ import Portrait from "../images/portrait.jpeg";
           <li>
             <div class="font-semibold">
               University of California, Santa Cruz
-              <span class="text-slate-500 text-sm">Jun 2020 - Jan 2023</span>
+              <span class="text-zinc-500 text-sm">Jun 2020 - Jan 2023</span>
             </div>
             <p>B.S. Computer Science</p>
           </li>
@@ -251,7 +253,7 @@ import Portrait from "../images/portrait.jpeg";
       </section>
     </article>
   </section>
-  <hr class="border lg:mx-8" />
+  <hr class="lg:mx-8" />
   <section
     id="selected-blog-posts"
     class="container mx-auto py-10 px-3 space-y-3"
