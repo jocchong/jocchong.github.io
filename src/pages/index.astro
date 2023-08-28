@@ -1,79 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
-
+import Socials from "../components/Socials.astro";
 import Avatar from "../components/Avatar.astro";
 import Portrait from "../images/portrait.jpeg";
-import Linkedin from "../images/socials/linkedin.svg";
-import Github from "../images/socials/github.svg";
-import Instagram from "../images/socials/instagram.svg";
-import At from "../images/socials/at.svg";
 ---
 
 <Layout title="Home">
   <div
     id="hero"
-    class="flex flex-col lg:flex-row items-center bg-red-200 lg:py-0 py-8"
+    class="flex flex-col lg:flex-row items-center bg-red-200 py-8 lg:py-0"
   >
     <div class="container flex justify-center lg:bg-red-400 lg:py-36 py-8">
       <Avatar />
     </div>
     <div class="container lg:pl-10 lg:py-0">
       <h1
-        class="text-[4rem] text-black leading-normal font-extrabold text-center lg:text-left"
+        class="text-[4rem] text-black leading-normal font-extrabold text-center"
       >
         Jon Chong
       </h1>
-      <ul class="flex space-x-4 lg:justify-start justify-center lg:pl-4">
-        <li>
-          <Link href="https://www.linkedin.com/in/jonchong56/" inNewTab>
-            <img
-              src={Linkedin}
-              width="35"
-              alt="LinkedIn"
-              class="hover:animate-wiggle"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link href="https://github.com/jocchong" inNewTab>
-            <img
-              src={Github}
-              width="35"
-              alt="GitHub"
-              class="hover:animate-wiggle"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link href="mailto:jonchong56@gmail.com">
-            <img src={At} width="35" alt="Email" class="hover:animate-wiggle" />
-          </Link>
-        </li>
-        <li>
-          <Link href="https://www.instagram.com/joomooru/" inNewTab>
-            <img
-              src={Instagram}
-              width="35"
-              alt="Instagram"
-              class="hover:animate-wiggle"
-            />
-          </Link>
-        </li>
-      </ul>
+      <Socials />
     </div>
   </div>
   <hr class="border-4 border-black border-dashed" />
   <article id="about-me" class="container mx-auto py-10 px-3 space-y-3">
-    <section class="grid lg:grid-cols-3 gap-4">
+    <div class="grid lg:grid-cols-3 gap-4">
       <div class="col-span-2">
-        <header class="pb-2">
-          <h2 class="text-3xl font-extrabold pt-2">Hi, I'm Jon 👋🏼</h2>
-          <h3 class="text-xl font-bold text-neutral-600 pt-2">
+        <header>
+          <h2 class="text-3xl font-extrabold">Hi, I'm Jon 👋🏼</h2>
+          <h3 class="text-xl font-bold text-slate-500">
             Professional Software Engineer
           </h3>
         </header>
-        <div class="space-y-2 col-span-2">
+        <div class="space-y-2 col-span-2 mt-2">
           <h3 class="text-xl font-bold">About Me</h3>
           <p>
             My main areas of expertise are web development involving JavaScript,
@@ -91,21 +51,23 @@ import At from "../images/socials/at.svg";
           </p>
         </div>
       </div>
-      <figure class="">
+      <figure class="flex flex-col">
         <img
           src={Portrait}
           alt="Portrait of Jon Chong"
           width="300"
           class="rounded"
         />
-        <figcaption class="text-neutral-600">
-          A portrait of me by
-          <Link href="https://www.instagram.com/bradtna/" inNewTab>
-            Bradtna Lou
-          </Link>
+        <figcaption>
+          Fall in Central Park <span class="text-slate-500 text-sm"
+            >Image:
+            <Link href="https://www.instagram.com/bradtna/" inNewTab>
+              Bradtna Lou
+            </Link></span
+          >
         </figcaption>
       </figure>
-    </section>
+    </div>
   </article>
   <hr class="border-4 border-black border-dashed" />
   <section id="what-ive-done" class="container mx-auto py-10 px-3 space-y-3">
@@ -113,13 +75,13 @@ import At from "../images/socials/at.svg";
       <h2 class="text-3xl font-extrabold pt-2">What I've Done</h2>
       <section>
         <h3 class="text-2xl font-bold mt-4">Professional Experience</h3>
-        <ul class="mt-2">
+        <ul class="mt-2 space-y-2">
           <li>
             <details
-              class="hover:bg-neutral-200 open:bg-neutral-200 open:text-black transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-slate-200 open:bg-slate-200 open:text-black transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer"
-                >Haven Technologies <span class="text-neutral-500 text-sm"
+                >Haven Technologies <span class="text-slate-500 text-sm"
                   >Jan 2023 - Jun 2023</span
                 >
               </summary>
@@ -171,23 +133,22 @@ import At from "../images/socials/at.svg";
           </li>
           <li>
             <details
-              class="hover:bg-neutral-200 open:bg-neutral-200 transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-slate-200 open:bg-slate-200 transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer">
-                Beckman Coulter <span class="text-neutral-500 text-sm"
+                Beckman Coulter <span class="text-slate-500 text-sm"
                   >Jun 2020 - Jan 2023</span
                 >
               </summary>
               <div class="px-4 py-2 space-y-4">
-                <em>Full Stack Developer</em>
+                <em>Software Engineer</em>
                 <div>
                   <h4 class="font-semibold">Responsibilities</h4>
                   <p>
-                    Modernized a legacy application by building, testing, and
-                    deploying a modern full stack web app, Angular Typescript
-                    frontend with Express backend and GraphQL API. Performed
-                    on-call duties as primary point of contact to fix issues in
-                    QA, demo, and production environments.
+                    Developed and deployed an internal web app that integrated
+                    existing processes used by R&D scientists. Communicated with
+                    stakeholders daily to develop new features, improve existing
+                    ones, and debug issues.
                   </p>
                 </div>
                 <div class="grid gap-4 lg:grid-cols-3 grid-cols-1">
@@ -195,29 +156,34 @@ import At from "../images/socials/at.svg";
                     <h4 class="font-semibold">Achievements</h4>
                     <ul class="list-disc list-inside">
                       <li>
-                        Reduced total data queried from database through use of
-                        optimized SQL queries and GraphQL, retrieving only data
-                        needed per request.
+                        Accelerated the CI/CD pipeline to run 1000% faster by
+                        parallelizing the end-to-end Selenium test suite.
                       </li>
                       <li>
-                        Minimized redundant database queries by using
-                        performance profiling tools that identified and
-                        optimized problematic components.
+                        Reduced repetitive work by automating generation of
+                        testing documentation and code coverage reports required
+                        for each major software release.
                       </li>
                       <li>
-                        Created more inclusive experience by working closely
-                        with UX designers, ensuring full accessibility of new
-                        and existing components.
+                        Increased velocity of feature development by
+                        strategizing and leading the adoption of React and
+                        accompanying REST API for new pages and retrofitting
+                        existing pages.
+                      </li>
+                      <li>
+                        Received team reward for on-time feature delivery, high
+                        test coverage, and low defect density.
                       </li>
                     </ul>
                   </div>
                   <div>
                     <h4 class="font-semibold">Technologies</h4>
                     <ul class="list-disc list-inside">
-                      <li>Angular</li>
-                      <li>GraphQL</li>
-                      <li>Docker</li>
-                      <li>Express</li>
+                      <li>ASP.NET</li>
+                      <li>C#</li>
+                      <li>JQuery</li>
+                      <li>React</li>
+                      <li>Webpack</li>
                     </ul>
                   </div>
                 </div>
@@ -226,19 +192,48 @@ import At from "../images/socials/at.svg";
           </li>
           <li>
             <details
-              class="hover:bg-neutral-200 open:bg-neutral-200 transition-all duration-200 rounded-lg px-4 py-3"
+              class="hover:bg-slate-200 open:bg-slate-200 transition-all duration-200 rounded-lg px-4 py-3"
             >
               <summary class="font-semibold hover:cursor-pointer"
-                >Wyde <span class="text-neutral-500 text-sm"
+                >Wyde <span class="text-slate-500 text-sm"
                   >Jan 2020 - Jun 2020</span
                 ></summary
               >
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                optio eos iure rerum exercitationem facilis perspiciatis natus?
-                Eveniet veniam soluta possimus reprehenderit cumque ducimus
-                quidem nesciunt, fugiat, at iusto similique?
-              </p>
+              <div class="px-4 py-2 space-y-4">
+                <em>Software Engineer</em>
+                <div>
+                  <h4 class="font-semibold">Responsibilities</h4>
+                  <p>
+                    Rebuilt legacy application using low-code tool, integrating
+                    with backend REST API in development. Drove a new initiative
+                    to create a customer portal for managing insurance policies.
+                  </p>
+                </div>
+                <div class="grid gap-4 lg:grid-cols-3 grid-cols-1">
+                  <div class="lg:col-span-2">
+                    <h4 class="font-semibold">Achievements</h4>
+                    <ul class="list-disc list-inside">
+                      <li>
+                        Boosted development velocity to meet project deadlines
+                        by bootstrapping React component library.
+                      </li>
+                      <li>
+                        Increased client engagement by winning support for
+                        client portal projects that reduced friction of access
+                        between client and client data.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Technologies</h4>
+                    <ul class="list-disc list-inside">
+                      <li>React</li>
+                      <li>JavaScript</li>
+                      <li>Webpack</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </details>
           </li>
         </ul>
@@ -247,19 +242,13 @@ import At from "../images/socials/at.svg";
         <h3 class="text-2xl font-bold mt-4">Education</h3>
         <ul>
           <li>
-            <div>
-              <span class="font-semibold"
-                >University of California, Santa Cruz</span
-              >
-              <span class="text-neutral-500 text-sm">Jun 2020 - Jan 2023</span>
+            <div class="font-semibold">
+              University of California, Santa Cruz
+              <span class="text-slate-500 text-sm">Jun 2020 - Jan 2023</span>
             </div>
             <p>B.S. Computer Science</p>
           </li>
         </ul>
-      </section>
-      <section>
-        <h3 class="text-2xl font-bold mt-4">Skills</h3>
-        <div></div>
       </section>
     </article>
   </section>
