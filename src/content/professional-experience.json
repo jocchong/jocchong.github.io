@@ -1,0 +1,55 @@
+[
+  {
+    "company": "Haven Technologies",
+    "startDate": "Jan 2023",
+    "endDate": "Jun 2023",
+    "jobTitle": "Full Stack Developer",
+    "responsibilities": "Modernized a legacy application by building, testing, and deploying a modern full stack web app, Angular Typescript frontend with Express backend and GraphQL API. Performed on-call duties as primary point of contact to fix issues in QA, demo, and production environments.",
+    "achievements": [
+      "Reduced total data queried from database through use of optimized SQL queries and GraphQL, retrieving only data needed per request.",
+      "Minimized redundant database queries by using performance profiling tools that identified and optimized problematic components.",
+      "Created more inclusive experience by working closely with UX designers, ensuring full accessibility of new and existing components."
+    ],
+    "technologies": [
+      "TypeScript",
+      "Angular",
+      "Express",
+      "GraphQL",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "company": "Beckman Coulter",
+    "startDate": "Jun 2020",
+    "endDate": "Jan 2023",
+    "jobTitle": "Software Engineer",
+    "responsibilities": "Developed and deployed an internal web app that integrated existing processes used by R&D scientists. Communicated with stakeholders daily to develop new features, improve existing ones, and debug issues.",
+    "achievements": [
+      "Accelerated the CI/CD pipeline to run 1000% faster by parallelizing the end-to-end Selenium test suite.",
+      "Reduced repetitive work by automating generation of testing documentation and code coverage reports required for each major software release.",
+      "Increased velocity of feature development by strategizing and leading the adoption of React and accompanying REST API for new pages and retrofitting existing pages.",
+      "Received team reward for on-time feature delivery, high test coverage, and low defect density."
+    ],
+    "technologies": [
+      "C#",
+      "JavaScript",
+      "ASP.NET",
+      "React",
+      "JQuery",
+      "SQL Server"
+    ]
+  },
+  {
+    "company": "Wyde",
+    "startDate": "Jan 2020",
+    "endDate": "Jun 2020",
+    "jobTitle": "Software Engineer",
+    "responsibilities": "Rebuilt legacy application using low-code tool, integrating with backend REST API in development. Drove a new initiative to create a customer portal for managing insurance policies.",
+    "achievements": [
+      "Boosted development velocity to meet project deadlines by bootstrapping React component library.",
+      "Increased client engagement by winning support for client portal projects that reduced friction of access between client and client data."
+    ],
+    "technologies": ["JavaScript", "React"]
+  }
+]
