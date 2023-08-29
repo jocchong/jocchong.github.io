@@ -5,9 +5,12 @@ import Socials from "../components/Socials.astro";
 import Avatar from "../components/Avatar.astro";
 import Portrait from "../images/portrait.jpeg";
 import professionalExperience from "../content/data/professional-experience.json";
+
+const description =
+  "The landing page for Jon Chong's personal blog, with a short section describing who he is and what he has done in his professional career.";
 ---
 
-<Layout title="Home">
+<Layout title="Home" description={description}>
   <div
     id="hero"
     class="flex flex-col lg:flex-row items-center bg-amber-400 dark:bg-amber-600 py-8 lg:py-0"
