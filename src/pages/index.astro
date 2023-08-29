@@ -13,37 +13,32 @@ const description =
 <Layout title="Home" description={description}>
   <div
     id="hero"
-    class="flex flex-col lg:flex-row items-center bg-amber-400 dark:bg-amber-600 py-8 lg:py-0"
+    class="grid lg:grid-cols-2 grid-cols-1 min-h-[92vh] bg-amber-400"
   >
-    <div
-      class="container flex justify-center lg:bg-amber-600 lg:dark:bg-amber-800 lg:py-36 py-8"
-    >
+    <div class="flex justify-center items-center pt-8 lg:bg-amber-600">
       <Avatar />
     </div>
-    <div class="container lg:pl-10 lg:py-0">
-      <h1
-        class="text-[4.5rem] text-zinc-900 leading-normal font-extrabold text-center"
-      >
+    <div class="text-center flex flex-col justify-center items-center pb-8">
+      <h1 class="text-[4.5rem] text-zinc-900 leading-normal font-extrabold">
         Jon Chong
       </h1>
       <Socials />
     </div>
   </div>
   <article id="about-me" class="container mx-auto space-y-2 px-4 py-12">
-    <div class="grid lg:grid-cols-3 gap-4">
+    <div class="grid lg:grid-cols-3 gap-12">
       <div class="col-span-2">
         <h2 class="text-3xl font-extrabold">About Me</h2>
         <div class="col-span-2 mt-2 space-y-4">
           <p>
-            Hi, I'm Jon! 👋🏼 I'm a full stack developer with an interest in open
-            source and deep knowledge of the DOM. I graduated from UC Santa Cruz
-            with a degree in Computer Science, where I learned the fundamentals
-            of software engineering and web development.
+            Hi, I'm Jon! 👋🏼 I am a software engineer with 3+ years of experience
+            in NodeJS and HTML/CSS/TypeScript. I have professional experience in
+            both back end and front end development, and I'm passionate about
+            building beautiful, user-friendly, and accessible applications.
           </p>
           <p>
-            Outside of writing code, I enjoy cooking, coffee, and science
-            fiction. I'm always experimenting with new recipes, and I love
-            trying different coffees from all over the world.
+            Outside of software development, I enjoy cooking new recipes, trying
+            coffees from around the world, and reading science fiction.
           </p>
           <p>
             I was born & raised in the California Bay Area and now live in New
@@ -75,7 +70,7 @@ const description =
       </figure>
     </div>
   </article>
-  <hr class="lg:mx-8" />
+  <hr class="lg:mx-8 border-black" />
   <section id="what-ive-done" class="container mx-auto space-y-2 px-4 py-12">
     <article>
       <h2 class="text-3xl font-extrabold pt-2">What I've Done</h2>
@@ -135,7 +130,7 @@ const description =
       </section>
     </article>
   </section>
-  <hr class="lg:mx-8" />
+  <hr class="lg:mx-8 border-black" />
   <section
     id="selected-blog-posts"
     class="container mx-auto py-10 px-3 space-y-3"
