@@ -4,7 +4,7 @@ import Link from "../components/Link.astro";
 import Socials from "../components/Socials.astro";
 import Avatar from "../components/Avatar.astro";
 import Portrait from "../images/portrait.jpeg";
-import professionalExperience from "../content/professional-experience.json";
+import professionalExperience from "../content/data/professional-experience.json";
 ---
 
 <Layout title="Home">
@@ -58,7 +58,7 @@ import professionalExperience from "../content/professional-experience.json";
           src={Portrait}
           alt="Portrait of Jon Chong"
           width="300"
-          class="rounded"
+          loading="lazy"
         />
         <figcaption>
           Fall in Central Park <span class="text-zinc-500 text-sm"
