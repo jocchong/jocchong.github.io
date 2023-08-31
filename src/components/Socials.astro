@@ -1,17 +1,17 @@
 ---
 import Link from "./Link.astro";
 
-import Linkedin from "../images/socials/linkedin.svg";
-import LinkedinLight from "../images/socials/linkedin-light.svg";
+import Linkedin from "../assets/socials/linkedin.svg";
+import LinkedinLight from "../assets/socials/linkedin-light.svg";
 
-import Github from "../images/socials/github.svg";
-import GithubLight from "../images/socials/github-light.svg";
+import Github from "../assets/socials/github.svg";
+import GithubLight from "../assets/socials/github-light.svg";
 
-import Mail from "../images/socials/mail.svg";
-import MailLight from "../images/socials/mail-light.svg";
+import Mail from "../assets/socials/mail.svg";
+import MailLight from "../assets/socials/mail-light.svg";
 
-import Instagram from "../images/socials/instagram.svg";
-import InstagramLight from "../images/socials/instagram-light.svg";
+import Instagram from "../assets/socials/instagram.svg";
+import InstagramLight from "../assets/socials/instagram-light.svg";
 
 interface Props {
   theme?: "light" | "dark";
@@ -30,7 +30,7 @@ const imageUrls = {
   <li>
     <Link href="https://www.linkedin.com/in/jonchong56/" inNewTab>
       <img
-        src={imageUrls.linkedin}
+        src={imageUrls.linkedin.src}
         width="35"
         alt="LinkedIn"
         class="hover:animate-wiggle"
@@ -40,7 +40,7 @@ const imageUrls = {
   <li>
     <Link href="https://github.com/jocchong" inNewTab>
       <img
-        src={imageUrls.github}
+        src={imageUrls.github.src}
         width="35"
         alt="GitHub"
         class="hover:animate-wiggle"
@@ -50,7 +50,7 @@ const imageUrls = {
   <li>
     <Link href="mailto:jonchong56@gmail.com">
       <img
-        src={imageUrls.mail}
+        src={imageUrls.mail.src}
         width="35"
         alt="Email"
         class="hover:animate-wiggle"
@@ -60,7 +60,7 @@ const imageUrls = {
   <li>
     <Link href="https://www.instagram.com/joomooru/" inNewTab>
       <img
-        src={imageUrls.instagram}
+        src={imageUrls.instagram.src}
         width="35"
         alt="Instagram"
         class="hover:animate-wiggle"
