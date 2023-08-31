@@ -1,15 +1,13 @@
 ---
-import Link from "./Link.astro";
+import { Image } from "astro:assets";
 
+import Link from "./Link.astro";
 import Linkedin from "../assets/socials/linkedin.svg";
 import LinkedinLight from "../assets/socials/linkedin-light.svg";
-
 import Github from "../assets/socials/github.svg";
 import GithubLight from "../assets/socials/github-light.svg";
-
 import Mail from "../assets/socials/mail.svg";
 import MailLight from "../assets/socials/mail-light.svg";
-
 import Instagram from "../assets/socials/instagram.svg";
 import InstagramLight from "../assets/socials/instagram-light.svg";
 
@@ -29,8 +27,8 @@ const imageUrls = {
 <ul class="flex space-x-4 justify-center">
   <li>
     <Link href="https://www.linkedin.com/in/jonchong56/" inNewTab>
-      <img
-        src={imageUrls.linkedin.src}
+      <Image
+        src={imageUrls.linkedin}
         width="35"
         alt="LinkedIn"
         class="hover:animate-wiggle"
@@ -39,8 +37,8 @@ const imageUrls = {
   </li>
   <li>
     <Link href="https://github.com/jocchong" inNewTab>
-      <img
-        src={imageUrls.github.src}
+      <Image
+        src={imageUrls.github}
         width="35"
         alt="GitHub"
         class="hover:animate-wiggle"
@@ -49,8 +47,8 @@ const imageUrls = {
   </li>
   <li>
     <Link href="mailto:jonchong56@gmail.com">
-      <img
-        src={imageUrls.mail.src}
+      <Image
+        src={imageUrls.mail}
         width="35"
         alt="Email"
         class="hover:animate-wiggle"
@@ -59,9 +57,8 @@ const imageUrls = {
   </li>
   <li>
     <Link href="https://www.instagram.com/joomooru/" inNewTab>
-      <img
-        src={imageUrls.instagram.src}
-        width="35"
+      <Image
+        src={imageUrls.instagram}
         alt="Instagram"
         class="hover:animate-wiggle"
       />

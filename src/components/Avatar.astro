@@ -1,9 +1,10 @@
 ---
-import avatarUrl from "../assets/avatar.png";
+import { Image } from "astro:assets";
+import avatarMetadata from "../assets/avatar.png";
 ---
-<img
+<Image
   id="avatar"
-  src={avatarUrl.src}
+  src={avatarMetadata}
   alt="Avatar representing Jon Chong"
   width="350"
   class="border-4 border-black rounded-full"
@@ -17,5 +18,5 @@ import avatarUrl from "../assets/avatar.png";
     setTimeout(() => {
       avatarElement.setAttribute("src", avatar.src);
     }, 300);
-  }, 3_000);
+  }, 2_500);
 </script>

@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
 import Socials from "../components/Socials.astro";
@@ -53,24 +54,21 @@ const description =
         </div>
       </div>
       <figure class="flex flex-col">
-        <img
-          src={portrait.src}
+        <Image
+          src={portrait}
           alt="Portrait of Jon Chong"
-          width="300"
-          loading="lazy"
         />
         <figcaption>
           Fall in Central Park <span class="text-zinc-500 text-sm"
             >Image:
             <Link href="https://www.instagram.com/bradtna/" inNewTab>
               Bradtna Lou
-            </Link></span
-          >
+            </Link></span>
         </figcaption>
       </figure>
     </div>
   </article>
-  <hr class="lg:mx-8 border-black" />
+  <hr class="lg:mx-8" />
   <section id="what-ive-done" class="container mx-auto space-y-2 px-4 py-12">
     <article>
       <h2 class="text-3xl font-extrabold pt-2">What I've Done</h2>
@@ -130,7 +128,7 @@ const description =
       </section>
     </article>
   </section>
-  <hr class="lg:mx-8 border-black" />
+  <hr class="lg:mx-8" />
   <section
     id="selected-blog-posts"
     class="container mx-auto py-10 px-3 space-y-3"
